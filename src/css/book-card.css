@@ -1,0 +1,100 @@
+.flexbox-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 10%;
+  margin: 5px;
+  /* margin-bottom: 20px; */
+  cursor: pointer;
+  animation-name: dim;
+  animation-duration: 0.5s;
+  filter: contrast(100%);
+}
+.book-title {
+  font-size: 1vw;
+  font-family: Helvetica;
+  /* font-weight: lighter; */
+  color: #f7f7f7;
+}
+.book-image {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 200px;
+}
+
+@keyframes brighten {
+  0% {
+    filter: contrast(100%);
+  }
+  25% {
+    filter: contrast(120%);
+  }
+  50% {
+    filter: contrast(135%);
+  }
+  100% {
+    filter: contrast(140%);
+  }
+}
+/* @keyframes largen {
+  0% {
+    width: 100%;
+  }
+  25% {
+    width: calc(100%+3px);
+  }
+  50% {
+    width: calc(100%+4px);
+  }
+  100% {
+    width: calc(100%+5px);
+  }
+} */
+@keyframes dim {
+  0% {
+    filter: contrast(140%);
+  }
+  25% {
+    filter: contrast(135%);
+  }
+  50% {
+    filter: contrast(120%);
+  }
+  100% {
+    filter: contrast(100%);
+  }
+}
+/* add fancier animations */
+.flexbox-item:hover {
+  animation-name: brighten;
+  animation-duration: 1s;
+  filter: contrast(140%);
+}
+.flexbox-item:active {
+  animation-name: dim;
+  animation-duration: 1s;
+  filter: contrast(100%);
+}
+/* from https://www.w3schools.com/howto/howto_css_aspect_ratio.asp */
+.placeholder-container {
+  background-color: #1d1d1d;
+  position: relative;
+  width: 100%;
+  padding-top: 140%;
+  border-radius: 5px;
+}
+.placeholder-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-25%);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.5vw;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: white;
+}

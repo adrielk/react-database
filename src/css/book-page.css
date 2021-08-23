@@ -1,0 +1,27 @@
+.flex-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-direction: row;
+}
+
+/* .catalog-title {
+  color: white;
+  font-family: Helvetica;
+  font-weight: lighter;
+  width: 20%;
+  justify-content: flex-start;
+} */
+
+.catalog-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px;
+  color: #f7f7f7;
+  font-family: Helvetica;
+}
